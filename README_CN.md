@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="https://user-images.githubusercontent.com/19553554/52535979-c0d0e680-2d8f-11e9-85c8-2e9f659e7c6f.png" width=300 height=300 />
+<img src="https://user-images.githubusercontent.com/19553554/52535979-c0d0e680-2d8f-11e9-85c8-2e9f659e7c6f.png" width=300 height=300 />
 </p>
 
 <h1 align="center">go-echarts</h1>
@@ -8,7 +8,10 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/go-echarts/go-echarts/actions/workflows/ci.yml">
+    <a href="https://github.com/go-echarts/go-echarts/actions/workflows/ci.yml
+
+
+">
         <img src="https://github.com/go-echarts/go-echarts/actions/workflows/ci.yml/badge.svg" alt="Build Status">
     </a>
     <a href="https://goreportcard.com/report/github.com/go-echarts/go-echarts">
@@ -20,62 +23,50 @@
     <a href="https://opensource.org/licenses/MIT">
         <img src="https://img.shields.io/badge/License-MIT-brightgreen.svg" alt="MIT License">
     </a>
-    <a href="https://pkg.go.dev/github.com/go-echarts/go-echarts/v2">
+        <a href="https://pkg.go.dev/github.com/go-echarts/go-echarts/v2">
         <img src="https://godoc.org/github.com/go-echarts/go-echarts?status.svg" alt="GoDoc">
     </a>
 </p>
 
-> If a language can be used to build web scrapers, it definitely needs to provide a graceful data visualization library. --- by dongdong.
+> 如果一门语言可以用来写爬虫，那么它就需要一个优雅的数据可视化库。 --- by dongdong
 
-In the Golang ecosystem, there are not many choices for data visualization libraries. The development of [go-echarts](https://github.com/go-echarts/go-echarts) aims to provide a simple yet powerful data visualization library for Golang. [Apache ECharts](https://echarts.apache.org/) is an outstanding charting and visualization library, it supports adorable chart types and various interactive features. There are many language bindings for Echarts, for example, [pyecharts](https://github.com/pyecharts/pyecharts). go-echarts learns from pyecharts and has evolved a lot.
+在 Golang 这门语言中，目前数据可视化的第三方库还是特别少，[go-echarts](https://github.com/go-echarts/go-echarts) 的开发就是为了填补这部分的空隙。[Apache ECharts](http://echarts.apache.org/) 是非常优秀的可视化图表库，凭借着良好的交互性，精巧的图表设计，得到了众多开发者的认可。也有其他语言为其实现了相应语言版本的接口，如 Python 的 [pyecharts](https://github.com/pyecharts/pyecharts)，go-echarts 也是借鉴了 pyecharts 的一些设计思想。
 
-[中文 README](README_CN.md)
 
-### 🔰 Installation
+### 🔰 安装
 
-Classic way to get go-echarts
+GOPATH
 
 ```shell
-# this may be a stupid way to use v2 go-echarts without gomod(GO111MODULE=off) because of
-# the next generation version management system... 🐶
-# if you get a better workaround, please let me know....
-
 $ go get -u github.com/go-echarts/go-echarts/...
+
+# 因为 gomod 的特殊的版本管理方式，使用 go get 方式并不能直接使用 v2 go-echarts 🐶
+# 不过可以通过以下方法使用新版本...
 $ cd $go-echarts-project
 $ mkdir v2 && mv charts components datasets opts render templates types v2
 ```
 
-Use gomod style
+GoMod
 
 ```shell
-$ go get -u github.com/go-echarts/go-echarts/v2/...
-```
-
-OR
-
-```shell
-# go.mod
-
 require github.com/go-echarts/go-echarts/v2
 ```
 
-### ⏳ Version
+### ⏳ 版本
 
-The go-echarts project is being developed under v2 version and the active codebase is on the master branch now.
+go-echarts 现在有 v1 和 v2 两个大版本，v1 版本的代码位于 v1 分支下，v2 代码位于 master 分支下。两个大版本是不兼容的，且 v1 不会再维护了，所以欢迎使用 v2 版本。
 
-v1 and v2 are incompatible which means that you cannot upgrade go-echarts from v1 to v2 smoothly. But I think it is worth trying that new version.
+### ✨ 特性
 
-### ✨ Features
+* 简洁的 API 设计，使用如丝滑般流畅
+* 囊括了 **25+** 种常见图表，应有尽有
+* 高度灵活的配置项，可轻松搭配出精美的图表
+* 详细的文档和示例，帮助开发者更快的上手项目
+* 多达 **400+** 地图，为地理数据可视化提供强有力的支持
 
-* Clean and comprehensive API.
-* Visualize your data in 25+ different ways.
-* Highly configurable chart options.
-* Detailed documentation and a rich collection of examples.
-* Visualize your geographical data with 400+ maps.
+### 📝 使用
 
-### 📝 Usage
-
-It's easy to get started with go-echarts. In this example, we create a simple bar chart with only a few lines of code.
+仅需要几行核心代码就可画出美观的图表
 
 ```golang
 package main
@@ -111,16 +102,16 @@ func main() {
 		AddSeries("Category A", generateBarItems()).
 		AddSeries("Category B", generateBarItems())
 	// Where the magic happens
-	f, _ := os.Create("bar.html")
-	bar.Render(f)
+	//f, _ := os.Create("bsa.html")
+	//bar.Render(f)
 }
 ```
 
-And the generated bar.html is rendered as below. Isn't that cool！
+`Render` 方法将会将渲染结果保存为 bar.html 文件
 
 ![](https://user-images.githubusercontent.com/19553554/98435974-5094f780-2112-11eb-81f6-b31d68f4d535.png)
 
-Of course we can also start a listening web server with net/http.
+当然也可以使用启动 http 服务将图表直接渲染出来
 
 ```golang
 package main
@@ -200,17 +191,7 @@ func main() {
 <img src="https://user-images.githubusercontent.com/19553554/52349544-c2ce3900-2a61-11e9-82af-28aaaaae0d67.gif" width="33%" alt="overlap"/>
 </div>
 
-For more information, please refer to [go-echarts/examples](https://github.com/go-echarts/examples) and the [GoDoc](https://pkg.go.dev/github.com/go-echarts/go-echarts/v2).
-
-### 💡 Contributing
-
-go-echarts is an open source project and built on the top of other open-source projects, hence we are always very happy to have contributions, whether for typo fix, bug fix or big new features. Please do not ever hesitate to ask a question or send a pull request.
-
-We strongly value documentation and integration with other projects so we are very glad to accept improvements for these aspects.
-
-### 😉 Authors
-
-Code with ❤️ by [chenjiandongx](https://github.com/chenjiandongx) / [Koooooo-7](https://github.com/Koooooo-7) and lovely [contributors](https://github.com/go-echarts/go-echarts/graphs/contributors)
+了解更多文档的内容请访问 [go-echarts/examples](https://github.com/go-echarts/examples) 以及 [GoDoc](https://pkg.go.dev/github.com/go-echarts/go-echarts/v2)
 
 ### 📃 License
 
