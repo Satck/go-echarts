@@ -191,8 +191,8 @@ func main() {
 <img src="https://user-images.githubusercontent.com/19553554/52349544-c2ce3900-2a61-11e9-82af-28aaaaae0d67.gif" width="33%" alt="overlap"/>
 </div>
 
-了解更多文档的内容请访问 [go-echarts/examples](https://github.com/go-echarts/examples) 以及 [GoDoc](https://pkg.go.dev/github.com/go-echarts/go-echarts/v2)
+了解更多文档的内容请访问 https://github.com/Satck/go-echarts-cq-examples 以及 [GoDoc](https://pkg.go.dev/github.com/go-echarts/go-echarts/v2)
 
 ### 📃 License
 
-MIT [©chenjiandongx](https://github.com/chenjiandongx)
+MIT https://github.com/Satck/go-echarts-cq.git

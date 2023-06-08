@@ -200,7 +200,7 @@ func main() {
 <img src="https://user-images.githubusercontent.com/19553554/52349544-c2ce3900-2a61-11e9-82af-28aaaaae0d67.gif" width="33%" alt="overlap"/>
 </div>
 
-For more information, please refer to [go-echarts/examples](https://github.com/go-echarts/examples) and the [GoDoc](https://pkg.go.dev/github.com/go-echarts/go-echarts/v2).
+For more information, please refer to  and the [GoDoc](https://pkg.go.dev/github.com/go-echarts/go-echarts/v2).
 
 ### 💡 Contributing
 
@@ -210,8 +210,7 @@ We strongly value documentation and integration with other projects so we are ve
 
 ### 😉 Authors
 
-Code with ❤️ by [chenjiandongx](https://github.com/chenjiandongx) / [Koooooo-7](https://github.com/Koooooo-7) and lovely [contributors](https://github.com/go-echarts/go-echarts/graphs/contributors)
+Code by  ChengQi   https://github.com/Satck/go-echarts-cq
 
-### 📃 License
+### 📃 License   https://github.com/Satck/go-echarts-cq.git
 
-MIT [©chenjiandongx](https://github.com/chenjiandongx)
